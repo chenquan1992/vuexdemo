@@ -11,7 +11,7 @@ const state = {
     resturantName: '飞歌餐馆', // 默认值
     // id: xxx  如果还有全局状态也可以在这里添加
     // name:xxx
-    chenquan:'陈铨测试值666'
+    chenquan:'陈铨测试值666',
 }
 
 // 注册上面引入的各大模块
@@ -21,7 +21,13 @@ const store = new Vuex.Store({
     actions,  // 数据的异步操作
     mutations,  // 处理数据的唯一途径，state的改变或赋值只能在这里
   plugins: [createPersistedState({
-    storage: window.localStorage
+    storage: window.localStorage,
+    reducer(val) {
+      return {
+        // 只储存state中的chenquan
+        chenquan: val.chenquan,
+      }
+    }
   })]
 })
 
