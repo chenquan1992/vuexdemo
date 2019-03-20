@@ -5,6 +5,10 @@ export function modifyAName({commit}, name) { // commit 提交；name即为点�
 export function modifyBName({commit}, name) {
     return commit ('modifyBName', name)
 }
+export function changeChenquan({commit}, name) {//相当于自定义的函数
+    name = name + "   先到actions" ;
+    return commit ('changeChenquan', name)
+}
 
 // ES6精简写法
 // export const modifyAName = ({commit},name) => commit('modifyAName', name)

@@ -2,6 +2,7 @@
   <div class="componentsB">
       <P class="title">组件B</P>
       <P class="titleName">餐馆名称：{{resturantName}}</P>
+      <P class="titleName">餐馆名称：{{chenquan}}</P>
       <div>
           <!-- 点击修改 为 B 餐馆 -->
           <button class="btn" @click="modifyBName('B餐馆')">修改为B餐馆</button>
@@ -29,7 +30,7 @@ export default {
       }
   },
   computed: {
-      ...mapGetters(['resturantName']) // 动态计算属性，相当于this.$store.getters.resturantName
+      ...mapGetters(['resturantName','chenquan']) // 动态计算属性，相当于this.$store.getters.resturantName
   }
 }
 </script>

@@ -5,3 +5,7 @@ export const modifyAName = (state, name) => { // A组件点击更改餐馆名称
 export const modifyBName = (state, name) => { // B组件点击更改餐馆名称为 B餐馆
     state.resturantName = name
 }
+export const changeChenquan = (state, name) => {
+  name = name + "   再到mutation"  ;
+    state.chenquan = name
+}
